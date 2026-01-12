@@ -72,6 +72,7 @@
             border-radius: 25px; 
             border: 2px solid rgb(6, 228, 73);
             background: rgba(255,255,255,0.2); 
+            backdrop-filter: blur(10px); 
             color: rgb(29, 92, 13); 
             outline: none; 
             font-size: 1rem;
@@ -85,7 +86,8 @@
         .marquee-container {
             width: 100%; 
             overflow: hidden; 
-            background: rgba(0, 0, 0, 0.6); 
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(8px); 
             border-radius: 50px; 
             margin-bottom: 15px; 
             padding: 10px 0;
@@ -127,7 +129,7 @@
         }
         
         .card {
-            background: rgba(14, 13, 13, 0.3);
+            background: rgba(14, 13, 13, 0.3); backdrop-filter: blur(15px);
             border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1);
             overflow: hidden; cursor: pointer; transition: 0.3s;
         }
@@ -144,14 +146,29 @@
 
         /* POP-UP MODAL */
         .modal {
-            display: none; position: fixed; z-index: 2000; left: 0; top: 0;
-            width: 100%; height: 100%; background-color: rgba(0,0,0,0.9);
-            backdrop-filter: blur(10px); align-items: center; justify-content: center;
+            display: none; 
+            position: fixed; 
+            z-index: 2000; 
+            left: 0; 
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            background-color: rgba(0,0,0,0.9);
+            backdrop-filter: blur(10px); 
+            align-items: center; 
+            justify-content: center;
         }
         .modal-content {
-            background: #1a1a1a; border: 2px solid rgb(2, 252, 239); width: 90%; max-width: 380px;
-            padding: 25px; border-radius: 25px; text-align: center; color: white;
-            position: relative; animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: #1a1a1a; 
+            border: 2px solid rgb(2, 252, 239); 
+            width: 90%; 
+            max-width: 380px;
+            padding: 25px; 
+            border-radius: 25px; 
+            text-align: center; 
+            color: white;
+            position: relative; 
+            animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
         @keyframes popIn { from { transform: scale(0.5); opacity: 0; } to { transform: scale(1); opacity: 1; } }
         
@@ -186,22 +203,22 @@
 
     <div class="container">
         <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/enter%20menu.png?raw=true" class="logo-custom" alt="Logo">
-        <h1>☕MENU DRINK ENTER COFFEE & TEA</h1>
+        <h1>☕ MENU DRINK ENTER COFFEE & TEA</h1>
 
         
         <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="ayo Cari minuman favoritmu...">
 
         <div class="marquee-container">
-            <div class="marquee-text">☕ ayo segera order dan nikmati rasa dari enter coffee & tea ☕ &nbsp;&nbsp;&nbsp; ☕ ayo segera order dan nikmati rasa dari enter coffee & tea ☕</div>
+            <div class="marquee-text">☕ Ayo segera order dan nikmati rasa dari enter coffee & tea ☕ &nbsp;&nbsp;&nbsp; ☕ Come on, order now and enjoy the taste of Enter Coffee & Tea ☕</div>
         </div>
 
         <a href="#" class="btn-telegram-single" onclick="orderTelegramUmum()">
               CONTACT US 
-        </a>
+        </a>    
 
         <div class="menu-container" id="productGrid">
             
-            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20CAPPUCCINO.png?raw=true', 'HOT CAPPUCCINO', '40/50','5.000/6.000')">
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20CAPPUCCINO.png?raw=true', 'HOT CAPPUCCINO', '40/50')">
                 <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20CAPPUCCINO.png?raw=true" loading="lazy" alt="HOT CAPPUCCINO">
                 <div class="card-content">
                     <div class="product-name">HOT CAPPUCCINO </div>
@@ -210,7 +227,7 @@
                 </div>
             </div>
 
-            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20AMERICANO.png?raw=true', 'HOT AMERICANO', '40/50','5.000/6.000')">
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20AMERICANO.png?raw=true', 'HOT AMERICANO', '40/50')">
                 <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20AMERICANO.png?raw=true" loading="lazy" alt="HOT AMERICANO">
                 <div class="card-content">
                     <div class="product-name">HOT AMERICANO</div>
@@ -218,7 +235,7 @@
                     <span class="price-tag">៛5,000 / ៛6,000</span>
                 </div>
             </div>
-            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20CAMBODIA%20COFFEE.png?raw=true', 'HOT CAMBODIA COFFEE', '40/50','5.000/6.000')">
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20CAMBODIA%20COFFEE.png?raw=true', 'HOT CAMBODIA COFFEE', '40/50')">
                 <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20CAMBODIA%20COFFEE.png?raw=true" loading="lazy" alt="HOT CAMBODIA COFFEE">
                 <div class="card-content">
                     <div class="product-name">HOT CAMBODIA COFFEE</div>
@@ -227,7 +244,7 @@
                 </div>
             </div>
 
-            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20LATTE.png?raw=true', 'HOT LATTE ', '40/50','5.000/6.000')">
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20LATTE.png?raw=true', 'HOT LATTE ', '40/50')">
                 <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20LATTE.png?raw=true" loading="lazy" alt="HOT LATTE ">
                 <div class="card-content">
                     <div class="product-name">HOT LATTE </div>
@@ -236,7 +253,7 @@
                 </div>
             </div>
             
-            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20MOCHA.png?raw=true', 'HOT MOCHA', '40/50','5.000/6.000')">
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20MOCHA.png?raw=true', 'HOT MOCHA', '40/50')">
                 <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20MOCHA.png?raw=true" loading="lazy" alt="HOT MOCHA">
                 <div class="card-content">
                     <div class="product-name">HOT MOCHA</div>
@@ -245,7 +262,7 @@
                 </div>
             </div>
 
-                        <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20CHOCOLATE.png?raw=true', 'HOT CHOCOLATE', '40/50','5.000/6.000')">
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20CHOCOLATE.png?raw=true', 'HOT CHOCOLATE', '40/50')">
                 <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20CHOCOLATE.png?raw=true" loading="lazy" alt="HOT CHOCOLATE">
                 <div class="card-content">
                     <div class="product-name">HOT CHOCOLATE</div>
@@ -254,8 +271,7 @@
                 </div>
             </div>
 
-
-            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20MATCHA%20LATTE.png?raw=true', 'HOT MATCHA LATTE', '40/50','5.000/6.000')">
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20MATCHA%20LATTE.png?raw=true', 'HOT MATCHA LATTE', '40/50')">
                 <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20MATCHA%20LATTE.png?raw=true" loading="lazy" alt="HOT MATCHA LATTE">
                 <div class="card-content">
                     <div class="product-name">HOT MATCHA LATTE</div>
@@ -264,8 +280,7 @@
                 </div>
             </div>
 
-
-            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20FRESH%20MILK.png?raw=true', 'HOT FRESH MILK', '40/50','5.000/6.000')">
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20FRESH%20MILK.png?raw=true', 'HOT FRESH MILK', '40/50')">
                 <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20FRESH%20MILK.png?raw=true" loading="lazy" alt="HOT FRESH MILK">
                 <div class="card-content">
                     <div class="product-name">HOT FRESH MILK</div>
@@ -274,8 +289,7 @@
                 </div>
             </div>
 
-
-            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20OVALTINE.png?raw=true', 'HOT OVALTINE', '40/50','5.000/6.000')">
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20OVALTINE.png?raw=true', 'HOT OVALTINE', '40/50')">
                 <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20OVALTINE.png?raw=true" loading="lazy" alt="HOT OVALTINE">
                 <div class="card-content">
                     <div class="product-name">HOT OVALTINE</div>
@@ -284,27 +298,420 @@
                 </div>
             </div>
 
-
-            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20OLDTOWN.png?raw=true', 'HOT OVALTINE', '30','4000')">
-                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20OLDTOWN.png?raw=true" loading="lazy" alt="HOT OVALTINE">
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20OLDTOWN.png?raw=true', 'HOT OLDTOWN', '30/50')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20OLDTOWN.png?raw=true" loading="lazy" alt="HOT OLDTOWN">
                 <div class="card-content">
                     <div class="product-name">HOT OLDTOWN</div>
-                    <span class="price-tag">฿30</span>
-                    <span class="price-tag">៛4,000</span>
+                    <span class="price-tag">฿30 / ฿50</span>
+                    <span class="price-tag">៛4,000 / ៛6,000</span>
                 </div>
             </div>
 
-
-            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20GOOD%20DAY.png?raw=true', 'HOT OVALTINE', '30','4,000')">
-                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20GOOD%20DAY.png?raw=true" loading="lazy" alt="HOT OVALTINE">
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20GOOD%20DAY.png?raw=true', 'HOT GOOD DAY', '30/50')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20GOOD%20DAY.png?raw=true" loading="lazy" alt="HOT GOOD DAY">
                 <div class="card-content">
                     <div class="product-name">HOT GOOD DAY</div>
-                    <span class="price-tag">฿30</span>
-                    <span class="price-tag">៛4,000</span>
+                    <span class="price-tag">฿30 / ฿50</span>
+                    <span class="price-tag">៛4,000 / ៛6,000</span>
                 </div>
             </div>
             
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20LIPTON.png?raw=true', 'HOT LIPTON', '25/50')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20LIPTON.png?raw=true" loading="lazy" alt="HOT LIPTON">
+                <div class="card-content">
+                    <div class="product-name">HOT LIPTON</div>
+                    <span class="price-tag">฿25 / ฿50</span>
+                    <span class="price-tag">៛3,000 / ៛6,000</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20JASMINE%20TEA.png?raw=true', 'HOT JASMINE TEA', '30/50')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/HOT%20JASMINE%20TEA.png?raw=true" loading="lazy" alt="HOT JASMINE TEA">
+                <div class="card-content">
+                    <div class="product-name">HOT JASMINE TEA</div>
+                    <span class="price-tag">฿30 / ฿50</span>
+                    <span class="price-tag">៛4,000 / ៛6,000</span>
+                </div>
+            </div>
+            
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/14.png?raw=true', 'ICE OLDTOWN', '30/50')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/14.png?raw=true" loading="lazy" alt="ICE OLDTOWN">
+                <div class="card-content">
+                    <div class="product-name">ICE OLDTOWN</div>
+                    <span class="price-tag">฿30 / ฿50</span>
+                    <span class="price-tag">៛4,000 / ៛6,000</span>
+                </div>
+            </div>            
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/15.png?raw=true', 'ICE GOOD DAY', '30/50')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/15.png?raw=true" loading="lazy" alt="ICE GOOD DAY">
+                <div class="card-content">
+                    <div class="product-name">ICE GOOD DAY</div>
+                    <span class="price-tag">฿30 / ฿50</span>
+                    <span class="price-tag">៛4,000 / ៛6,000</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/16.png?raw=true', 'ICE LIPTON', '30/50')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/16.png?raw=true" loading="lazy" alt="ICE LIPTON">
+                <div class="card-content">
+                    <div class="product-name">ICE LIPTON</div>
+                    <span class="price-tag">฿30 / ฿50</span>
+                    <span class="price-tag">៛4,000 / ៛6,000</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20AMERICANO.png?raw=true', 'ICED AMERICANO', '50')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20AMERICANO.png?raw=true" loading="lazy" alt="ICED AMERICANO">
+                <div class="card-content">
+                    <div class="product-name">ICED AMERICANO</div>
+                    <span class="price-tag">฿50</span>
+                    <span class="price-tag">៛6,000</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20AMERICANO%20HONEY%20LEMON.png?raw=true', 'ICED AMERICANO HONEY LEMON', '60')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20AMERICANO%20HONEY%20LEMON.png?raw=true" loading="lazy" alt="ICED AMERICANO HONEY LEMON">
+                <div class="card-content">
+                    <div class="product-name">ICED AMERICANO HONEY LEMON</div>
+                    <span class="price-tag">฿60</span>
+                    <span class="price-tag">៛7,000</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20CAMBODIA%20COFFEE.png?raw=true', 'ICED CAMBODIA COFFEE', '60')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20CAMBODIA%20COFFEE.png?raw=true" loading="lazy" alt="ICED CAMBODIA COFFEE">
+                <div class="card-content">
+                    <div class="product-name">ICED CAMBODIA COFFEE</div>
+                    <span class="price-tag">฿60</span>
+                    <span class="price-tag">៛7,000</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20CHOCOLATE.png?raw=true', 'ICED CHOCOLATE', '60')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20CHOCOLATE.png?raw=true" loading="lazy" alt="ICED CHOCOLATE">
+                <div class="card-content">
+                    <div class="product-name">ICED CHOCOLATE</div>
+                    <span class="price-tag">฿60</span>
+                    <span class="price-tag">៛7,000</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20MILO.png?raw=true', 'ICED MILO', '60')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20MILO.png?raw=true" loading="lazy" alt="ICED MILO">
+                <div class="card-content">
+                    <div class="product-name">ICED MILO</div>
+                    <span class="price-tag">฿60</span>
+                    <span class="price-tag">៛7,000</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20VANILLA%20LATTE.png?raw=true', 'ICED VANILLA LATTE', '60')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20VANILLA%20LATTE.png?raw=true" loading="lazy" alt="ICED VANILLA LATTE">
+                <div class="card-content">
+                    <div class="product-name">ICED VANILLA LATTE</div>
+                    <span class="price-tag">฿60</span>
+                    <span class="price-tag">៛7,000</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20HAZELNUT%20LATTE.png?raw=true', 'ICED HAZELNUT LATTE', '60')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20HAZELNUT%20LATTE.png?raw=true" loading="lazy" alt="ICED HAZELNUT LATTE">
+                <div class="card-content">
+                    <div class="product-name">ICED HAZELNUT LATTE</div>
+                    <span class="price-tag">฿60</span>
+                    <span class="price-tag">៛7,000</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20LEMON%20EXPRESSO.png?raw=true', 'ICED LEMON EXPRESSO', '60')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20LEMON%20EXPRESSO.png?raw=true" loading="lazy" alt="ICED LEMON EXPRESSO">
+                <div class="card-content">
+                    <div class="product-name">ICED LEMON EXPRESSO</div>
+                    <span class="price-tag">฿60</span>
+                    <span class="price-tag">៛7,000</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20CAPPUCCINO.png?raw=true', 'ICED CAPPUCCINO', '60')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20CAPPUCCINO.png?raw=true" loading="lazy" alt="ICED CAPPUCCINO">
+                <div class="card-content">
+                    <div class="product-name">ICED CAPPUCCINO</div>
+                    <span class="price-tag">฿60</span>
+                    <span class="price-tag">៛7,000</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20MOCHA.png?raw=true', 'ICED MOCHA', '60')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20MOCHA.png?raw=true" loading="lazy" alt="ICED MOCHA">
+                <div class="card-content">
+                    <div class="product-name">ICED MOCHA</div>
+                    <span class="price-tag">฿60</span>
+                    <span class="price-tag">៛7,000</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20MATCHA%20LATTE.png?raw=true', 'ICED MATCHA LATTE', '60')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20MATCHA%20LATTE.png?raw=true" loading="lazy" alt="ICED MATCHA LATTE">
+                <div class="card-content">
+                    <div class="product-name">ICED MATCHA LATTE</div>
+                    <span class="price-tag">฿60</span>
+                    <span class="price-tag">៛7,000</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20CARAMEL%20LATTE.png?raw=true', 'ICED CARAMEL LATTE', '60')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20CARAMEL%20LATTE.png?raw=true" loading="lazy" alt="ICED CARAMEL LATTE">
+                <div class="card-content">
+                    <div class="product-name">ICED CARAMEL LATTE</div>
+                    <span class="price-tag">฿60</span>
+                    <span class="price-tag">៛7,000</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20FRESH%20MILD.png?raw=true', 'ICED FRESH MILD', '40')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20FRESH%20MILD.png?raw=true" loading="lazy" alt="ICED FRESH MILD">
+                <div class="card-content">
+                    <div class="product-name">ICED FRESH MILD</div>
+                    <span class="price-tag">฿40</span>
+                    <span class="price-tag">៛5,000</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20CARAMEL.png?raw=true', 'ICED CARAMEL', '60')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20CARAMEL.png?raw=true" loading="lazy" alt="ICED CARAMEL">
+                <div class="card-content">
+                    <div class="product-name">ICED CARAMEL</div>
+                    <span class="price-tag">฿60</span>
+                    <span class="price-tag">៛7,000</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20LATTE.png?raw=true', 'ICED LATTE', '60')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20LATTE.png?raw=true" loading="lazy" alt="ICED LATTE">
+                <div class="card-content">
+                    <div class="product-name">ICED LATTE</div>
+                    <span class="price-tag">฿60</span>
+                    <span class="price-tag">៛7,000</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/32.png?raw=true', 'ICED OVALTINE', '60')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/32.png?raw=true" loading="lazy" alt="ICED OVALTINE">
+                <div class="card-content">
+                    <div class="product-name">ICED OVALTINE</div>
+                    <span class="price-tag">฿60</span>
+                    <span class="price-tag">៛7,000</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20TIRAMISU%20LATTE.png?raw=true', 'ICED TIRAMISU LATTE', '60')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20TIRAMISU%20LATTE.png?raw=true" loading="lazy" alt="ICED TIRAMISU LATTE">
+                <div class="card-content">
+                    <div class="product-name">ICED TIRAMISU LATTE</div>
+                    <span class="price-tag">฿60</span>
+                    <span class="price-tag">៛7,000</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20PINK%20MILK.png?raw=true', 'ICED PINK MILK', '50')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20PINK%20MILK.png?raw=true" loading="lazy" alt="ICED PINK MILK">
+                <div class="card-content">
+                    <div class="product-name">ICED PINK MILK</div>
+                    <span class="price-tag">฿50</span>
+                    <span class="price-tag">៛6,000</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/BLUEBERRY%20SODA.png?raw=true', 'BLUEBERRY SODA ', '50')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/BLUEBERRY%20SODA.png?raw=true" loading="lazy" alt="BLUEBERRY SODA ">
+                <div class="card-content">
+                    <div class="product-name">BLUEBERRY SODA </div>
+                    <span class="price-tag">฿50</span>
+                    <span class="price-tag">៛6,000</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/STRAWBERRY%20SODA.png?raw=true', 'STRAWBERRY SODA', '50')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/STRAWBERRY%20SODA.png?raw=true" loading="lazy" alt="STRAWBERRY SODA">
+                <div class="card-content">
+                    <div class="product-name">STRAWBERRY SODA </div>
+                    <span class="price-tag">฿50</span>
+                    <span class="price-tag">៛6,000</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/PAISSON%20SODA.png?raw=true', 'PAISSON SODA', '50')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/PAISSON%20SODA.png?raw=true" loading="lazy" alt="PAISSON SODA">
+                <div class="card-content">
+                    <div class="product-name">PAISSON SODA</div>
+                    <span class="price-tag">฿50</span>
+                    <span class="price-tag">៛6,000</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/BLUE%20CURACAU%20SODA.png?raw=true', 'BLUE CURACAU SODA', '50')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/BLUE%20CURACAU%20SODA.png?raw=true" loading="lazy" alt="BLUE CURACAU SODA">
+                <div class="card-content">
+                    <div class="product-name">BLUE CURACAU SODA</div>
+                    <span class="price-tag">฿50</span>
+                    <span class="price-tag">៛6,000</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/COFFEE%20FRAPPE.png?raw=true', 'COFFEE FRAPPE', '75')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/COFFEE%20FRAPPE.png?raw=true" loading="lazy" alt="COFFEE FRAPPE">
+                <div class="card-content">
+                    <div class="product-name">COFFEE FRAPPE</div>
+                    <span class="price-tag">฿75</span>
+                    <span class="price-tag">៛9,500</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/MOCHA%20FRAPPE.png?raw=true', 'MOCHA FRAPPE', '75')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/MOCHA%20FRAPPE.png?raw=true" loading="lazy" alt="MOCHA FRAPPE">
+                <div class="card-content">
+                    <div class="product-name">MOCHA FRAPPE</div>
+                    <span class="price-tag">฿75</span>
+                    <span class="price-tag">៛9,500</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20MATCHA%20LATTE.png?raw=true', 'MATCHA FRAPPE', '75')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20MATCHA%20LATTE.png?raw=true" loading="lazy" alt="MATCHA FRAPPE">
+                <div class="card-content">
+                    <div class="product-name">MATCHA FRAPPE</div>
+                    <span class="price-tag">฿75</span>
+                    <span class="price-tag">៛9,500</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20VANILLA%20LATTE.png?raw=true', 'VANILLA FRAPPE', '75')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICED%20VANILLA%20LATTE.png?raw=true" loading="lazy" alt="VANILLA FRAPPE">
+                <div class="card-content">
+                    <div class="product-name">VANILLA FRAPPE</div>
+                    <span class="price-tag">฿75</span>
+                    <span class="price-tag">៛9,500</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/CHOCOLATE%20FRAPPE.png?raw=true', 'CHOCOLATE FRAPPE', '75')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/CHOCOLATE%20FRAPPE.png?raw=true" loading="lazy" alt="CHOCOLATE FRAPPE">
+                <div class="card-content">
+                    <div class="product-name">CHOCOLATE FRAPPE</div>
+                    <span class="price-tag">฿75</span>
+                    <span class="price-tag">៛9,500</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/FRESH%20MILK%20FRAPPE.png?raw=true', 'FRESH MILK FRAPPE', '75')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/FRESH%20MILK%20FRAPPE.png?raw=true" loading="lazy" alt="FRESH MILK FRAPPE">
+                <div class="card-content">
+                    <div class="product-name">FRESH MILK FRAPPE</div>
+                    <span class="price-tag">฿75</span>
+                    <span class="price-tag">៛9,500</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/CARAMEL%20FRAPPE.png?raw=true', 'CARAMEL FRAPPE', '75')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/CARAMEL%20FRAPPE.png?raw=true" loading="lazy" alt="CARAMEL FRAPPE">
+                <div class="card-content">
+                    <div class="product-name">CARAMEL FRAPPE</div>
+                    <span class="price-tag">฿75</span>
+                    <span class="price-tag">៛9,500</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/STRAWBERRY%20SMOOTHIE.png?raw=true', 'STRAWBERRY SMOOTHIE', '75')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/STRAWBERRY%20SMOOTHIE.png?raw=true" loading="lazy" alt="STRAWBERRY SMOOTHIE">
+                <div class="card-content">
+                    <div class="product-name">STRAWBERRY SMOOTHIE</div>
+                    <span class="price-tag">฿75</span>
+                    <span class="price-tag">៛9,500</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/PAISSON%20%20SMOOTHIE.png?raw=true', 'PAISSON  SMOOTHIE', '75')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/PAISSON%20%20SMOOTHIE.png?raw=true" loading="lazy" alt="PAISSON  SMOOTHIE">
+                <div class="card-content">
+                    <div class="product-name">PAISSON  SMOOTHIE</div>
+                    <span class="price-tag">฿75</span>
+                    <span class="price-tag">៛9,500</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/BLUEBERRY%20SMOOTHIE.png?raw=true', 'BLUEBERRY SMOOTHIE', '75')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/BLUEBERRY%20SMOOTHIE.png?raw=true" loading="lazy" alt="BLUEBERRY SMOOTHIE">
+                <div class="card-content">
+                    <div class="product-name">BLUEBERRY SMOOTHIE</div>
+                    <span class="price-tag">฿75</span>
+                    <span class="price-tag">៛9,500</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICE%20JASMINE%20TEA.png?raw=true', 'ICE JASMINE TEA', '25')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/ICE%20JASMINE%20TEA.png?raw=true" loading="lazy" alt="ICE JASMINE TEA">
+                <div class="card-content">
+                    <div class="product-name">ICE JASMINE TEA</div>
+                    <span class="price-tag">฿25</span>
+                    <span class="price-tag">៛3,000</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/BUBBLE%20BROWN%20SUGAR.png?raw=true', 'BUBBLE BROWN SUGAR', '60')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/BUBBLE%20BROWN%20SUGAR.png?raw=true" loading="lazy" alt="BUBBLE BROWN SUGAR">
+                <div class="card-content">
+                    <div class="product-name">BUBBLE BROWN SUGAR</div>
+                    <span class="price-tag">฿60</span>
+                    <span class="price-tag">៛7,000</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/GREEN%20MILK%20TEA.png?raw=true', 'GREEN MILK TEA', '50')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/GREEN%20MILK%20TEA.png?raw=true" loading="lazy" alt="GREEN MILK TEA">
+                <div class="card-content">
+                    <div class="product-name">GREEN MILK TEA</div>
+                    <span class="price-tag">฿50</span>
+                    <span class="price-tag">៛6,000</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/TARO%20MILK%20TEA.png?raw=true', 'TARO MILK TEA', '50')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/TARO%20MILK%20TEA.png?raw=true" loading="lazy" alt="TARO MILK TEA">
+                <div class="card-content">
+                    <div class="product-name">TARO MILK TEA</div>
+                    <span class="price-tag">฿50</span>
+                    <span class="price-tag">៛6,000</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/THAI%20MILK%20TEA.png?raw=true', 'THAI MILK TEA', '50')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/THAI%20MILK%20TEA.png?raw=true" loading="lazy" alt="THAI MILK TEA">
+                <div class="card-content">
+                    <div class="product-name">THAI MILK TEA</div>
+                    <span class="price-tag">฿50</span>
+                    <span class="price-tag">៛6,000</span>
+                </div>
+            </div>
+            
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/TAIWAN%20MILK%20TEA.png?raw=true', 'TAIWAN MILK TEA', '50')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/TAIWAN%20MILK%20TEA.png?raw=true" loading="lazy" alt="TAIWAN MILK TEA">
+                <div class="card-content">
+                    <div class="product-name">TAIWAN MILK TEA</div>
+                    <span class="price-tag">฿50</span>
+                    <span class="price-tag">៛6,000</span>
+                </div>
+            </div>
+
+            <div class="card product-item" onclick="showPopup('https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/SWEET%20POTATO%20MILK.png?raw=true', 'SWEET POTATO MILK ', '75')">
+                <img src="https://github.com/88xiaowu-dev/ENTER-COFFEE-TEA/blob/main/SWEET%20POTATO%20MILK.png?raw=true" loading="lazy" alt="SWEET POTATO MILK ">
+                <div class="card-content">
+                    <div class="product-name">SWEET POTATO MILK </div>
+                    <span class="price-tag">฿75</span>
+                    <span class="price-tag">៛9,500</span>
+                </div>
+            </div>
+
             </div>
     </div>
 
@@ -313,8 +720,7 @@
             <span class="close-modal" onclick="closePopup()">×</span>
             <img id="modalImg" class="modal-img" src="https://github.com/88xiaowu-dev/-xiaowurokok-/blob/main/MARLBORO%20BLACK%2020.png?raw=true">
             <div id="modalName" style="font-size: 1.3rem; font-weight: 700; margin-bottom: 5px; color: #ffd700;">HOT CAPPUCCINO</div>
-            <div id="modalPrice" style="font-size: 1.1rem; margin-bottom: 15px;">Harga: ฿ 40</div>
-            <div id="modalPrice" style="font-size: 1.1rem; margin-bottom: 15px;">Harga: ៛ 5.000</div>
+            <div id="modalPrice" style="font-size: 1.1rem; margin-bottom: 15px;">Harga: 40</div>
             <a id="modalOrderBtn" href="https://t.me/e_wu88?text=Halo%20Admin%2C%20saya%20ingin%20order%3A%0A%0AProduk%3A%20MARLBORO%20BLACK%2020%0AHarga%3A%20%E0%B8%BF%201.300" target="_blank" class="btn-modal-order">ORDER VIA TELEGRAM</a>
         </div>
     </div>
@@ -331,7 +737,7 @@
             document.getElementById('modalName').innerText = name;
             document.getElementById('modalPrice').innerText = "Harga: ฿ " + price;
             
-            const pesan = `Halo Admin, saya ingin order:\n\nProduk: ${name}\nHarga: ฿ ${price}`;
+            const pesan = `Halo Enter Coffee, saya ingin order:\n\nProduk: ${name}\nHarga: ฿ ${price}`;
             document.getElementById('modalOrderBtn').href = `https://t.me/${telegramUsername}?text=${encodeURIComponent(pesan)}`;
             
             document.getElementById('productModal').style.display = "flex";
@@ -386,8 +792,4 @@
 
 
 
-
 </body></html>
-
-
-
